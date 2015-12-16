@@ -3,6 +3,7 @@ div{
 	border: 10px inset #555555;
 	margin: auto;
 	width: 300px;
+	background-color: #aa00aa;
 }
 
 body{
@@ -15,4 +16,5 @@ body{
 
 h1{
 	text-align: center;
+	background-color: #aa00aa;
 }

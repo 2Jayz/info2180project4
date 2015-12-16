@@ -1,7 +1,8 @@
 function validate(){
 	var valid = true;
 	var passwords = true;
-	var patt = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+	var name_patt = /^[A-Z]+[a-z]$/;
+	var user_patt = /^[A-Z0-9._%+-]{4,}$/i;
 	var fname = $("input")[0].value;
 	var lname = $("input")[1].value;
 	var user = $("input")[2].value;
@@ -14,5 +15,5 @@ function validate(){
 	console.log(pass1);
 	console.log(pass2);
 	
-	return !valid;
+	//return !valid;
 }
