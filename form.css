@@ -1,0 +1,18 @@
+div{
+	padding: 10px;
+	border: 10px inset #555555;
+	margin: auto;
+	width: 300px;
+}
+
+body{
+	background-image: url("mailbox.jpg");
+	background-repeat: no-repeat;
+	background-size: 1500px 700px;
+	background-attachment: scroll;
+
+}
+
+h1{
+	text-align: center;
+}
