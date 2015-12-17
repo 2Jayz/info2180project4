@@ -1,0 +1,45 @@
+body{
+	background-image: url("puppymail.jpg");
+	background-repeat: no-repeat;
+	background-size: 1400px 700px;
+	background-attachment: scroll;
+	color: black;
+	font-family: serif;
+
+
+}
+
+div#form_division {
+
+	margin-left: 50px;
+	float: left;
+	border: 3px solid white;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	height: 400px;
+	width: 300px;
+}
+
+div#headline{
+
+	text-align: center;
+	height: 50px;
+	font-size: 50px;
+	color: black;
+	font-family: fancy;
+	
+}
+
+
+
+
+
+
+#resultMssg{
+	color: red;
+	font-size: 20px;
+	font-family: fancy;
+}
