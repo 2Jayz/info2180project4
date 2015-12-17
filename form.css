@@ -3,7 +3,7 @@
 	border: 10px inset #888888;
 	margin: auto;
 	width: 300px;
-	background-color: #aa00aa;
+	/*background-color: #aa00aa;*/
 }
 
 .errors{
@@ -25,7 +25,7 @@
 	/*text-align: center;*/
 	padding: 5px;
 	color: #FF0000;
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 }
 
 .valid{
@@ -36,17 +36,9 @@
 	border: 5px double #ff0000;
 }
 
-body{
-	background-image: url("mailbox.jpg");
-	background-repeat: no-repeat;
-	background-size: 1500px 700px;
-	background-attachment: scroll;
-
-}
-
 h1{
 	text-align: center;
-	background-color: #aa00aa;
+	/*background-color: #aa00aa;*/
 }
 
 h3, p{
