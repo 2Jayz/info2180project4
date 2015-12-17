@@ -8,7 +8,7 @@ function validate(){
 	var user = $("input")[2];
 	var pass1 = $("input")[3];
 	var pass2 = $("input")[4];
-	var error = $("div#errors")[0];
+	var error = $("div#error_msg")[0];
 	
 	console.log(fname.value);
 	console.log(lname.value);
