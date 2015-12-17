@@ -1,9 +1,39 @@
-div{
+#form{
 	padding: 10px;
-	border: 10px inset #555555;
+	border: 10px inset #888888;
 	margin: auto;
 	width: 300px;
 	background-color: #aa00aa;
+}
+
+.errors{
+	display: none;
+	margin: auto;
+	width: 320px;
+	border: 5px double #ff0000;
+	/*text-align: center;*/
+	padding: 5px;
+	color: #FF0000;
+	background-color: #ffffff;
+}
+
+.visible{
+	display: visible;
+	margin: auto;
+	width: 320px;
+	border: 5px double #ff0000;
+	/*text-align: center;*/
+	padding: 5px;
+	color: #FF0000;
+	background-color: #ffffff;
+}
+
+.valid{
+	border: 2px solid #00ff00;
+}
+
+.invalid{
+	border: 5px double #ff0000;
 }
 
 body{
@@ -17,4 +47,14 @@ body{
 h1{
 	text-align: center;
 	background-color: #aa00aa;
+}
+
+h3, p{
+	text-align: center;
+	
+}
+
+p{
+	font-weight: bold;
+	font-size: 15px;
 }

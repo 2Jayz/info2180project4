@@ -7,8 +7,8 @@
     </head>
     <body>
         <h1>Fill out the following form to create a new Cheapo Mail user.</h1>
-        <div>
-	        <form method = "post" onSubmit = "return validate()">
+        <div id = "form">
+	        <form method = "post" action = "new_user.php" onload = "return validate()">
 	           <fieldset>
 					<legend>New User Information:</legend>
 					<label>First Name</label>
@@ -39,6 +39,16 @@
 				    <input type = "submit"></input>
 				</fieldset>
 	        </form>
+		</div>
+		
+		<div class = "errors">
+			<h3>Error</h3>
+			<p>One or more of the following errors are present:</p>
+			<ul>
+				<li id = "name">Invalid name entered</li>
+				<li id = "user">Invalid username</li>
+				<li id = "pass">Passwords do not match</li>
+			</ul>
 		</div>
     </body>
 </html>
