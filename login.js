@@ -1,38 +1,86 @@
 window.onload = function (){
-  var user = $("user");
-  var password = $("pwd");
-  var go = $("Submit");
-  go.onclick = login;
+	
+	document.getElementById("login").onsubmit = validation;
+	
+	
+	function validation(){
+		var form_elements = document.getElementById("login");
+		var result = document.getElementById("resultMssg");
 
-  
- 
-  function login(){  
-    var username = $("user").value;
-    var pass = $("pwd").value;
+	var user = form_elements.elements["UserName"].value;
+	console.log(user);
+	
+	var pwd = form_elements.elements["Password"].value;
+	var error = "Login failed please check username/password";
+	
 
-                new Ajax.Request('login.php',
-                       {
-                          method: 'post',
-                          parameters: {user: username, password: pass},
-                          onSuccess: loadHomePage,
-                          onFailure: sendError
+		
+		
+	if (user == null || user == "" || pwd ==null || pwd == ""){
+	
+		result.innerHTML = error;		
+	}else{
+	 	
+			result.innerHTML = "Login! Your message playground awaits";
+		new Ajax.Request("login.php",
+                      {
+                          method: "post",
+                         parameters: {username: user, password: pwd},
+                           onSuccess: returnResult,
+                          onFailure: returnError
+                          
                          });  
-                }
-              
-       function loadHomePage(data) {
-            if (data.status == 200){
-              console.log ("Its ok");
-              location.href = "homepage.php"
-            } 
-          }
+	}
+ 
+	
+		
+	
+ 
+function returnResult(data) {
+ 
+   //  console.log(data.responseText);
+   // var response = data.responseText ;
+   // console.log(response);
+    var response = data.status ; 
+      //if (response == "200"){
+  console.log(response);
+  console.log("passed");
+           location.href = "homepage.php";
+           }
+         function returnError(data){
+          console.log(data.status);
+          console.log("failed");
+          // location.href = "index.html";
+              result.innerHTML = "Login failed! Username and/or password is not recognized.";
+              }
 
-function sendError(data){
-  console.log(data.responseText);
-  if (data.status == 401){
-    $("resultMssg").innerHTML = "Double check your username and/or password.";
-  }
-}
+
+return false;	}
+
     
-
-};
+//  // var user = document.getElementById("user");
+//  // var password = document.getElementById("pwd");
+//  // var go = document.getElementById("Submit");
+//  // go.onclick = login;
+//  //function login() {
+//  //                 var username = user.value;
+//  //               var pass = password.value;
+//  //                  var mySession = new XMLHttpRequest();
+//  //                  mySession.open("POST","login.php" ,false);
+//  //                  mySession.send();
+//  //                  if( mySession.Status == 200){
+//  //             console.log ("Its ok");
+//  //             location.href = "homepage.php";
+//  //          } else if (mySession.status == 400){
+//  //              var mytext = mySession.responseText;
+//  //                  console.log(mytext);
+//  //                  var result = document.getElementById("resultMssg");
+//  //                  result.innerHTML = (mytext);
+//  //          }
+                   
+//  //             }
+              
+              
+   
+ };
                         

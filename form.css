@@ -1,9 +1,30 @@
+
+body {
+	background-image: url("newuser.jpg");
+	background-repeat: no-repeat;
+	background-size: 1400px 800px;
+	font-family: fancy;
+}
+
+#head{
+	margin-top: 10px;
+	font-size: 50px;
+	font-family: fancy;
+	text-align: center;
+	
+}
+
+#instruction{
+	text-align: center;
+	font-size: 20px;
+}
+
 #form{
 	padding: 10px;
 	border: 10px inset #888888;
 	margin: auto;
 	width: 300px;
-	/*background-color: #aa00aa;*/
+	background-color: white;
 }
 
 .error_msg{

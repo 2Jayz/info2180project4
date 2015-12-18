@@ -6,7 +6,10 @@
         <script type = "text/javascript" src = "validator.js"></script>
     </head>
     <body>
-        <h1>Fill out the following form to create a new Cheapo Mail user.</h1>
+    	<div id = "head" >New User</div>
+    </br></br>
+    		<p id = "instruction" > *Fill out the following form to create a new Cheapo Mail user.</p>
+    	</br>
         <div id = "form">
 	        <form method = "post" action = "new_user.php" onload = "return validate()">
 	           <fieldset>
@@ -40,6 +43,7 @@
 				</fieldset>
 	        </form>
 		</div>
+	
 		
 		<div class = "error_msg">
 			<h3>Error</h3>
@@ -50,5 +54,6 @@
 				<li id = "pass">Passwords do not match</li>
 			</ul>
 		</div>
+	
     </body>
 </html>
