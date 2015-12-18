@@ -1,6 +1,5 @@
 function validate(){
 	var valid = true;
-	var passwords = true;
 	var name_patt = /^[A-Z]+[a-z]$/i;
 	var user_patt = /^[A-Z0-9._%+-]{4,}$/i;
 	var fname = $("input")[0];
@@ -35,7 +34,7 @@ function validate(){
 	}
 	
 	
-	if(pass1 !== pass2){
+	if(pass1.value != pass2.value){
 		valid = false;
 		pass1.setAttribute("class", "invalid");
 		pass2.setAttribute("class", "invalid");
@@ -52,5 +51,5 @@ function validate(){
 		error.setAttribute("class", "errors");
 	}
 	
-	return !valid;
+	return valid;
 }
