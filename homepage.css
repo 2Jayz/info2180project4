@@ -1,0 +1,82 @@
+#headline{
+    position: relative;
+    float: top;
+    text-align: justify;
+    width: 100%;
+}
+
+#msg_list{
+    position: relative;
+    float: left;
+    text-align: justify;
+    width: 10%;
+}
+
+#message{
+    position: relative;
+    float: top;
+    width: 75%;
+}
+
+#users{
+    position: relative;
+    float: right;
+    width: 10%;
+}
+
+/*#table{*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*    border: collapse;*/
+/*}*/
+
+table{
+	margin: auto;
+	border-collapse: collapse;
+	/*width: 75%;*/
+}
+
+#table{
+	margin: auto;
+	border-collapse: collapse;
+	/*width: 75%;*/
+}
+
+td, th{
+	padding-right: 10px;
+	padding-left: 10px;
+	border-top-color: #ffffff;
+	border-top-width: 1px;
+	border-top-style: solid;
+	text-align: left;
+}
+
+th{
+	background-color: #687290;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+/*td{*/
+/*    padding-bottom: 5px;*/
+/*    border-bottom: 2px solid #000000;*/
+/*}*/
+
+.mlist{
+    position: relative;
+    float: left;
+    text-align: justify;
+    /*width: 10%;*/
+}
+
+.msg{
+    position: relative;
+    float: left;
+    /*width: 75%;*/
+}
+
+.ulist{
+    position: relative;
+    float: right;
+    /*width: 10%;*/
+}
