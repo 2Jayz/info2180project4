@@ -9,7 +9,7 @@
             // $user = $_POST["user"];
             // $pass = $_POST["pass"];
 
-            $conn = mysql_connect('localhost', 'root', '', 'cheapomail');
+            $conn = mysql_connect('127.0.0.1', 'root', '', 'cheapomail');
 
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
