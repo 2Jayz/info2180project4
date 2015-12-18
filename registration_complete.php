@@ -9,7 +9,7 @@
             $user = $_POST["user"];
             $pass = $_POST["pass"];
 
-            $conn = new mysqli("localhost", "jaceg13", "", "c9");
+            $conn = new mysqli(getenv('IP'), getenv('C9_USER'), "", "c9", 3306);
 
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
@@ -18,7 +18,7 @@
             
             // $connection = mysql_connect('127.0.0.1', 'comp2190SA','2015Sem1','MPMgmtDB');
             
-            $sql = "INSERT INTO User (id, firstname, lastname, password, username) VALUES ('$id', '$fname', '$lname', '$pass', '$user')";
+            // $sql = "INSERT INTO User (id, firstname, lastname, password, username) VALUES ('$id', '$fname', '$lname', '$pass', '$user')";
             
             echo($fname.", ".$lname.", ".$user.", ".$pass);
         ?>
