@@ -7,7 +7,7 @@ function validate(){
 	var user = $("input")[2];
 	var pass1 = $("input")[3];
 	var pass2 = $("input")[4];
-	var error = $("div#error_msg")[0];
+	var error = $(".error_msg")[0];
 	
 	console.log(fname.value);
 	console.log(lname.value);
@@ -45,10 +45,10 @@ function validate(){
 	}
 	
 	if(!valid){
-		error.setAttribute("class", "visible");
+		error.setAttribute("class", "error_msg");
 	}
 	else{
-		error.setAttribute("class", "errors");
+		error.setAttribute("class", "error_msg invisible");
 	}
 	
 	return valid;

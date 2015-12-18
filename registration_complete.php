@@ -8,12 +8,17 @@
             $lname = $_POST["lname"];
             $user = $_POST["user"];
             $pass = $_POST["pass"];
-//             $salt = mt_rand();
-// 			$digest = md5($pass.$salt);
+
+            $conn = new mysqli("localhost", "jaceg13", "", "c9");
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            echo "Connected successfully";
             
-//             $connection = mysql_connect();
+            // $connection = mysql_connect('127.0.0.1', 'comp2190SA','2015Sem1','MPMgmtDB');
             
-//             $sql = "INSERT INTO User (id, firstname, lastname, password, username) VALUES ('$id', '$fname', '$lname', '$pass', '$user')";
+            $sql = "INSERT INTO User (id, firstname, lastname, password, username) VALUES ('$id', '$fname', '$lname', '$pass', '$user')";
             
             echo($fname.", ".$lname.", ".$user.", ".$pass);
         ?>

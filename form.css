@@ -7,18 +7,6 @@
 }
 
 .error_msg{
-	display: none;
-	margin: auto;
-	width: 320px;
-	border: 5px double #ff0000;
-	/*text-align: center;*/
-	padding: 5px;
-	color: #FF0000;
-	background-color: #ffffff;
-}
-
-.visible{
-	display: visible;
 	margin: auto;
 	width: 320px;
 	border: 5px double #ff0000;
@@ -27,6 +15,21 @@
 	color: #FF0000;
 	/*background-color: #ffffff;*/
 }
+
+.invisible{
+	display: none;
+}
+
+/*.visible{*/
+/*	display: visible;*/
+/*	margin: auto;*/
+/*	width: 320px;*/
+/*	border: 5px double #ff0000;*/
+	/*text-align: center;*/
+/*	padding: 5px;*/
+/*	color: #FF0000;*/
+	/*background-color: #ffffff;*/
+/*}*/
 
 .valid{
 	border: 2px solid #00ff00;
