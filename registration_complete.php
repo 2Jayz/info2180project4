@@ -4,12 +4,12 @@
     </head>
     <body>
         <?php
-            $fname = $_POST["fname"];
-            $lname = $_POST["lname"];
-            $user = $_POST["user"];
-            $pass = $_POST["pass"];
+            // $fname = $_POST["fname"];
+            // $lname = $_POST["lname"];
+            // $user = $_POST["user"];
+            // $pass = $_POST["pass"];
 
-            $conn = new mysqli(getenv('IP'), getenv('C9_USER'), "", "c9", 3306);
+            $conn = mysql_connect('localhost', 'root', '', 'cheapomail');
 
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
