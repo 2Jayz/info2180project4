@@ -5,15 +5,20 @@
     // $pass = $_POST["pass"];
 
     $conn = mysql_connect('127.0.0.1', 'root', '', 'cheapomail');
-
+    
+    $sql = "INSERT INTO User (firstName, lastName, password, username) VALUES ('Jane', 'Doe', 'jd1234', 'jd1234')";
+    
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } 
     echo "Connected successfully";
     
-    // $connection = mysql_connect('127.0.0.1', 'comp2190SA','2015Sem1','MPMgmtDB');
+    // if(($connection->query($sql)) === TRUE){
+        
+    // }
     
-    // $sql = "INSERT INTO User (id, firstname, lastname, password, username) VALUES ('$id', '$fname', '$lname', '$pass', '$user')";
     
-    echo($fname.", ".$lname.", ".$user.", ".$pass);
+    // echo($fname.", ".$lname.", ".$user.", ".$pass);
+    
+    mysql_close();
 ?>

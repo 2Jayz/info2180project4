@@ -2,6 +2,7 @@ function validate(){
 	var valid = true;
 	var name_patt = /^[A-Z]+[a-z]$/i;
 	var user_patt = /^[A-Z0-9._%+-]{4,}$/i;
+	var pass_patt = /^[A-Z0-9._%+-]{8,}$/i;
 	var fname = $("input")[0];
 	var lname = $("input")[1];
 	var user = $("input")[2];
@@ -33,15 +34,20 @@ function validate(){
 		user.setAttribute("class", "valid");
 	}
 	
-	
-	if(pass1.value != pass2.value){
+	if(!(pass_patt.test(pass1.value))){
 		valid = false;
 		pass1.setAttribute("class", "invalid");
-		pass2.setAttribute("class", "invalid");
 	}
 	else{
-		pass1.setAttribute("class", "valid");
-		pass2.setAttribute("class", "valid");
+		if(pass1.value != pass2.value){
+			valid = false;
+			pass1.setAttribute("class", "invalid");
+			pass2.setAttribute("class", "invalid");
+		}
+		else{
+			pass1.setAttribute("class", "valid");
+			pass2.setAttribute("class", "valid");
+		}
 	}
 	
 	if(!valid){
