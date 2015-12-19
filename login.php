@@ -1,38 +1,43 @@
-<?php
-session_start();
-$host = "localhost";
-$username = "2jayzMail";
-$password = "2015info4";
-$dbname = "mail";
 
-$connection =  mysql_connect($dbhost,$dbuser,$dbpassword);
-	if (!mysql_connect()) 
-	{
-		die("Connection failed: " . mysql_errno());
-	} else{
-		$username = $_POST['username'];
+<?php
+	session_start();
+	
+$connection =	mysql_connect(
+getenv('IP'),
+getenv('C9_USER')
+
+);
+     	 mysql_select_db("mail");
+     	$username = $_POST['username'];
 		$password = $_POST['password'];
-		$sql = "SELECT * FROM user WHERE UserName = '$username' AND Password = '$password'";
-		$database = mysql_select_db($dbname,$connection);
+		
+		$sql = "SELECT * FROM user WHERE username = '".$username."' AND password = '".$password."' LIMIT 1";
+		
 
 		session_start();
 		$rows = mysql_query($sql);
-		if(mysql_num_rows($rows) == 1){
-			while($row = mysql_fetch_array($rows)){
-				$_SESSION["id"] = $rows["id"];
-				$_SESSION["first_name"] = $rows["First"];
-				$_SESSION["last_name"] = $rows["Last"];
-				$_SESSION["username"] = $rows["User"];
-				$_SESSION["password"] = $rows["Access"];
-				header('HTTP/1.1 200 OK', true, 200);
+		//print $rows;
+		$numRows = mysql_num_rows($rows);
+		
+		
+    		if($numRows > 0){
+    			http_response_code(200);
+    		while($row = mysql_fetch_array($rows)){
+				$_SESSION["id"] = $row["id"];
+				$_SESSION["first_name"] = $row["first_name"];
+				$_SESSION["last_name"] = $row["last_name"];
+				$_SESSION["username"] = $row["username"];
+				$_SESSION["password"] = $row["password"];
     		}
-    	} else{
-		echo "<p>Invalid username or password</p>";
-		header('HTTP/1.1 401 Unauthorized', true, 401);
-		exit;
-		}
-	}
+    		
+    			//print "found";
+    		}else{
+    		http_response_code(404);
+    		//}
 
+
+echo $rows;
+mysql_close($connection);
 ?>
 
 

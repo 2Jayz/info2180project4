@@ -7,9 +7,12 @@
         <script type = "text/javascript" src = "validator.js"></script>
     </head>
     <body>
-        <h1>Fill out the following form to create a new CheapoM@il user.</h1>
+    	<div id = "head" >New User</div>
+    </br></br>
+    		<p id = "instruction" > *Fill out the following form to create a new Cheapo Mail user.</p>
+    	</br>
         <div id = "form">
-	        <form action = "registration_complete.php" onsubmit = "return validate()" method = "post">
+	        <form method = "post" action = "new_user.php" onload = "return validate()">
 	           <fieldset>
 					<legend>New User Information:</legend>
 					<label>First Name</label>
@@ -41,8 +44,9 @@
 				</fieldset>
 	        </form>
 		</div>
+	
 		
-		<div class = "error_msg invisible">
+		<div class = "error_msg">
 			<h3>Error</h3>
 			<p>One or more of the following errors are present:</p>
 			<ul>
@@ -51,5 +55,6 @@
 				<li id = "pass">Passwords do not match or are too short</li>
 			</ul>
 		</div>
+	
     </body>
 </html>
