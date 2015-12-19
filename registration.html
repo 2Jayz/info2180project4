@@ -12,7 +12,7 @@
     		<p id = "instruction" > *Fill out the following form to create a new Cheapo Mail user.</p>
     	</br>
         <div id = "form">
-	        <form method = "post" action = "registration_complete.php" onload = "return validate()">
+	        <form action = "registration_complete.php" onsubmit = "return validate()" method = "post">
 	           <fieldset>
 					<legend>New User Information:</legend>
 					<label>First Name</label>
